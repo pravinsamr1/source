@@ -122,81 +122,73 @@
          </div>
       </div>
    </div>
-   <div class="modal fade login-modal-main" id="login">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-         <div class="modal-content">
-            <div class="modal-body">
+               <div class="modal fade login-modal-main" id="login">
+      <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 780px;">
+         <div class="modal-content border-0 overflow-hidden" style="border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+            <div class="modal-body p-0">
                <div class="login-modal">
-                  <div class="row">
-                     <div class="col-lg-6 d-flex align-items-center">
-                        <div class="login-modal-left p-4 text-center pl-5">
-                           <img src="img/logo-png.png" alt="Gurdeep singh osahan">
+                  <div class="row no-gutters">
+                     <div class="col-md-5 d-none d-md-flex align-items-center justify-content-center text-center p-4 p-lg-5" style="background: linear-gradient(135deg, #053305 0%, #084608 100%); color: #ffffff;">
+                        <div>
+                           <img src="img/logo-png.png" alt="Gayathri's Bakshanam" class="img-fluid mb-3 bg-white p-2 rounded shadow-sm" style="max-width: 150px;">
+                           <h5 class="font-weight-bold text-white mb-2" style="font-size: 18px; letter-spacing: 0.3px;">Gayathri's Bakshanam</h5>
+                           <p class="text-white-50 small mb-0" style="font-size: 13px; line-height: 1.5;">Authentic South Indian Sweets &amp; Savouries Delivered Fresh To You.</p>
                         </div>
                      </div>
-                     <div class="col-lg-6">
-                        <button type="button" class="close close-top-right position-absolute" data-dismiss="modal"
-                           aria-label="Close">
-                           <span aria-hidden="true"><i class="icofont-close-line"></i></span>
-                           <span class="sr-only">Close</span>
+                     <div class="col-md-7 bg-white position-relative p-4 p-md-5">
+                        <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close" style="top: 18px; right: 20px; z-index: 10; font-size: 24px; color: #666; opacity: 0.8;">
+                           <span aria-hidden="true">&times;</span>
                         </button>
-                        <form class="position-relative">
-                           <ul class="mt-4 mr-4 nav nav-tabs-login float-right position-absolute" role="tablist">
-                              <li>
-                                 <a class="nav-link-login active" data-toggle="tab" href="#login-form" role="tab"><i
-                                       class="icofont-ui-lock"></i> LOGIN</a>
-                              </li>
-                              <li>
-                                 <a class="nav-link-login" data-toggle="tab" href="#register" role="tab"><i
-                                       class="icofont icofont-pencil"></i> REGISTER</a>
-                              </li>
-                           </ul>
-                           <div class="login-modal-right p-4">
-                              <!-- Tab panes -->
-                              <div class="tab-content">
-                                 <div class="tab-pane active" id="login-form" role="tabpanel">
-                                    <h5 class="heading-design-h5 text-dark">LOGIN</h5>
-                                    <fieldset class="form-group mt-4">
-                                       <label>Enter Email/Mobile number</label>
-                                       <input type="text" class="form-control" placeholder="+91 123 456 7890">
-                                    </fieldset>
-                                    <fieldset class="form-group">
-                                       <label>Enter Password</label>
-                                       <input type="password" class="form-control" placeholder="********">
-                                    </fieldset>
-                                    <fieldset class="form-group">
-                                       <button type="submit" class="btn btn-lg btn-primary btn-block">Enter to your
-                                          account</button>
-                                    </fieldset>
-
-                                    <h6><a href="forgot-password.html">Forgot Password?</a></h6>
-                                    </div>
-                                 <div class="tab-pane" id="register" role="tabpanel">
-                                     <h5 class="heading-design-h5 text-dark">REGISTER</h5>
-                                     <fieldset class="form-group mt-4">
-                                        <label>Enter Email/Mobile number</label>
-                                        <input type="text" class="form-control" placeholder="+91 123 456 7890">
-                                     </fieldset>
-                                     <fieldset class="form-group">
-                                        <label>Enter Password</label>
-                                        <input type="password" class="form-control" placeholder="********">
-                                     </fieldset>
-                                     <fieldset class="form-group">
-                                        <label>Enter Confirm Password </label>
-                                        <input type="password" class="form-control" placeholder="********">
-                                     </fieldset>
-                                     <fieldset class="form-group">
-                                        <button type="submit" class="btn btn-lg btn-primary btn-block">Create Your
-                                           Account</button>
-                                     </fieldset>
-                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                        <label class="custom-control-label" for="customCheck2">I Agree with <a
-                                              href="#">Term and Conditions</a></label>
-                                     </div>
-                                  </div>
+                        
+                        <div class="mb-4">
+                           <h4 class="font-weight-bold text-dark mb-1" style="font-size: 22px;">LOGIN WITH OTP</h4>
+                           <p class="text-muted small mb-0" style="font-size: 13px;">Enter your 10-digit mobile number to get a 6-digit OTP</p>
+                        </div>
+                        
+                        <!-- Mobile Number Field -->
+                        <div class="form-group mb-3">
+                           <label class="font-weight- text-dark small mb-1">Mobile Number</label>
+                           <div class="input-group">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text bg-light font-weight- text-dark px-3">+91</span>
                               </div>
+                              <input type="tel" id="login-mobile-num" class="form-control form-control-lg" placeholder="Enter 10-digit mobile number" maxlength="10" autocomplete="tel" style="font-size: 16px; font-weight: 500;">
                            </div>
-                        </form>
+                           <small id="mobile-error-msg" class="text-danger d-none mt-1 font-weight-semibold">Please enter a 10-digit mobile number</small>
+                        </div>
+
+                        <!-- Initial Send OTP Button -->
+                        <div id="get-otp-btn-wrapper">
+                           <button type="button" id="btn-request-otp" class="btn btn-lg btn-block  text-white mt-3" style="background-color: #084608; border-color: #084608; border-radius: 8px; font-size: 15px; height: 48px;">
+                              Send 6-Digit OTP <i class="icofont-arrow-right ml-1"></i>
+                           </button>
+                        </div>
+
+                        <!-- 6-Digit OTP Section (Appears after clicking Send OTP) -->
+                        <div id="otp-verify-step" class="mt-4 pt-3 border-top" style="display:none;">
+                           <div class="d-flex align-items-center justify-content-between mb-3 bg-light p-2 rounded">
+                              <span class="small text-success"><i class="icofont-check-circled mr-1"></i> OTP sent to <strong id="display-mobile-no" class="text-dark">+91 XXXXX XXXXX</strong></span>
+                           </div>
+                           <div class="form-group mb-3">
+                              <label class="font-weight-bold text-dark small mb-2">Enter 6-Digit OTP</label>
+                              <div class="d-flex justify-content-between otp-digits-wrapper">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                 <input type="text" class="form-control text-center font-weight-bold otp-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                              </div>
+                              <small id="otp-error-msg" class="text-danger d-none mt-2 font-weight-semibold">Please enter the complete 6-digit OTP.</small>
+                           </div>
+                           <button type="button" id="btn-confirm-otp" class="btn btn-lg btn-block font-weight-bold text-white mt-3" style="background-color: #084608; border-color: #084608; border-radius: 8px; font-size: 15px; height: 48px;">
+                              Verify &amp; Login
+                           </button>
+                           <div class="text-center mt-3">
+                              <small class="text-muted">Didn't receive OTP? <button type="button" id="btn-resend-otp" class="btn btn-link p-0 small text-danger font-weight-bold ml-1 text-decoration-none">Resend OTP</button></small>
+                           </div>
+                        </div>
+
                      </div>
                   </div>
                </div>
@@ -254,7 +246,7 @@
                            ALL CATEGORIES
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow-sm border-0 p21 p22"
-                           style="max-height: 500px; overflow-y: auto;">
+                           style="max-height: 300px; overflow-y: auto;">
                            <a class="dropdown-item" href="product-grid.html">Authentic Sweets</a>
                            <a class="dropdown-item" href="product-grid.html">Tasty Savouries</a>
                            <a class="dropdown-item" href="product-grid.html">Seer Bakshanams</a>
@@ -410,7 +402,7 @@
    <section class="product-list pbc-5 pb-4 pt-5 ">
       <div class="container">
          <h6 class="mt-1 mb-0 float-right"><a href="product-grid.html">View All Items</a></h6>
-         <h4 class="mt-0 mb-3 text-dark font-weight-normel">Recent Products</h4>
+         <h4 class="mt-0 mb-3 text-dark font-weight-normel">Karthigai Deepam Combo</h4>
          <div class="row">
             <div class="col-6 col-md-3 p1">
                <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
@@ -578,7 +570,7 @@
    <section class="product-list pbc-5 pb-4 pt-5 bg-light">
       <div class="container">
          <h6 class="mt-1 mb-0 float-right"><a href="product-grid.html">View All Items</a></h6>
-         <h4 class="mt-0 mb-3 text-dark font-weight-normel">Best Selling Products</h4>
+         <h4 class="mt-0 mb-3 text-dark font-weight-normel">Introduction Offer</h4>
          <div class="row">
             <div class="col-6 col-md-3 p1">
                <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
@@ -743,7 +735,7 @@
       </div>
       </div>
    </section>
-   <section class="offer-product py-5">
+   <section class="offer-product pt-3">
       <div class="container">
          <div class="row">
             <div class="col-6">
@@ -755,146 +747,7 @@
          </div>
       </div>
    </section>
-   <section class="product-list pbc-5 pb-4 pt-5 bg-light">
-      <div class="container">
-         <h6 class="mt-1 mb-0 float-right"><a href="product-grid.html">View All Items</a></h6>
-         <h4 class="mt-0 mb-3 text-dark">New Arrived Products</h4>
-         <div class="row">
-            <div class="col-md-12">
-               <div class="owl-carousel owl-carousel-featured owl-theme">
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-danger">NEW</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Special Ghee Gulab Jamun</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-success">50% OFF</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Traditional South Indian Mysurpa</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a class="active" href="#"> <i
-                                 class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-danger">NEW</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Authentic Kai Murukku</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-success">50% OFF</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Crispy Ghee Butter Murukku</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-danger">NEW</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Special South Indian Mixture</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                        <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                        <a href="product-grid.html">
-                           <span class="badge badge-success">50% OFF</span>
-                           <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body p15">
-                           <h6 class="card-title mb-1"><a href="product-grid.html">Traditional Sweet Seedai</a>
-                           </h6>
-                           <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                                 class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                              <span>613</span>
-                           </div>
-                           <p class="mb-0 text-dark p16">₹ 135.00 <span class="text-black-50"><del>₹500.00 </del></span>
-                           </p>
-                           <button type="button" class="btn btn-primary btn-lg  p6  j3 p14  j6"><i
-                                 class="icofont icofont-shopping-cart"></i></button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section class="py-5" style="background-color:#f7f7f7;">
+   <section class="py-5">
       <div class="container">
          <div class="row">
             <div class="col-4">
@@ -913,178 +766,10 @@
          </div>
       </div>
    </section>
-   <section class="product-list pbc-5 pb-4 pt-5 ">
-      <div class="container">
-         <h6 class="mt-1 mb-0 float-right"><a href="product-grid.html">View All Items</a></h6>
-         <h4 class="mt-0 mb-3 text-dark font-weight-normel">Offered Products</h4>
-         <div class="row">
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-danger">NEW</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Crunchy Kara Thattai</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5 a1"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-success">50% OFF</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Madras Special Filter Coffee Powder</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a class="active" href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-danger">NEW</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Homemade Sambar Podi</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-success">50% OFF</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Homemade Idli Milagai Podi</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <a href="product-grid.html">
-                     <span class="badge badge-danger">NEW</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Traditional Avakkai Mango Pickle</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a class="active" href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-success">50% OFF</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Crispy Handcrafted Rice Vadam</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-danger">NEW</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Classic Nendran Banana Chips</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-            <div class="col-6 col-md-3 p1">
-               <div class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                  <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
-                  <a href="product-grid.html">
-                     <span class="badge badge-success">50% OFF</span>
-                     <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
-                  <div class="card-body p15">
-                     <a href="product-grid.html">
-                        <h6 class="card-title mb-1">Traditional Parupu Thengai Koodai</h6>
-                     </a>
-                     <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star active"></i><i
-                           class="icofont icofont-star active"></i><i class="icofont icofont-star"></i> <span>613</span>
-                     </div>
-                     <p class="mb-0 text-dark p16">₹150.00 / 250g <span class="text-black-50"><del>₹220.00</del></span></p>
-                     <button type="button" class="btn btn-primary btn-lg p5 p6 p4 j3 p12 j5"><i
-                           class="icofont icofont-shopping-cart"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      </div>
-   </section>
    <section class="product-list pbc-5 pb-4 pt-5 bg-light">
       <div class="container">
          <h6 class="mt-1 mb-0 float-right"><a href="product-grid.html">View All Items</a></h6>
-         <h4 class="mt-0 mb-3 text-dark">Festival Products</h4>
+         <h4 class="mt-0 mb-3 text-dark">Best Sellers</h4>
          <div class="row">
             <div class="col-md-12">
                <div class="owl-carousel owl-carousel-featured owl-theme">
