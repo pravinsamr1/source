@@ -28,14 +28,34 @@ $(document).ready(function() {
     var objowlcarousel = $(".owl-carousel-category");
     if (objowlcarousel.length > 0) {
         objowlcarousel.owlCarousel({
-            items: 4,
+            items: 6,
+            itemsDesktop: [1199, 5],
+            itemsDesktopSmall: [979, 4],
+            itemsTablet: [768, 4],
+            itemsMobile: [479, 4],
             lazyLoad: true,
             pagination: false,
-			 loop: true,
-            autoPlay: 2000,
+            loop: true,
+            autoPlay: 3000,
             navigation: true,
             stopOnHover: true,
-			navigationText: ["<i class='icofont icofont-thin-left'></i>", "<i class='icofont icofont-thin-right'></i>"]
+            navigationText: ["<i class='icofont icofont-thin-left'></i>", "<i class='icofont icofont-thin-right'></i>"]
+        });
+    }
+
+    // ===========Featured Product Carousel (2 Cards Scrolling on Mobile)============
+    var objowlfeatured = $(".owl-carousel-featured");
+    if (objowlfeatured.length > 0) {
+        objowlfeatured.owlCarousel({
+            items: 4,
+            itemsCustom: [[0, 2], [768, 3], [1199, 4]],
+            lazyLoad: true,
+            pagination: false,
+            loop: true,
+            autoPlay: 3500,
+            navigation: true,
+            stopOnHover: true,
+            navigationText: ["<i class='icofont icofont-thin-left'></i>", "<i class='icofont icofont-thin-right'></i>"]
         });
     }
 

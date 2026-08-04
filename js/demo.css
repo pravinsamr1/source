@@ -1063,16 +1063,8 @@ main .button.active {
 	vertical-align: middle
 }
 
-.hc-offcanvas-nav ul.bottom-nav li.github svg {
-	width: 17px;
-	height: 17px
-}
-
-.hc-offcanvas-nav ul.bottom-nav li.ko-fi svg {
-	width: 21px;
-	height: 21px
-}
-
+.hc-offcanvas-nav ul.bottom-nav li.facebook svg,
+.hc-offcanvas-nav ul.bottom-nav li.instagram svg,
 .hc-offcanvas-nav ul.bottom-nav li.email svg {
 	width: 19px;
 	height: 19px
